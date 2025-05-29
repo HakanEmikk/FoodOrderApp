@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewDesign"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:id="@+id/layout_food_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Yemek görseli -->
+            <ImageView
+                android:id="@+id/iv_food_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Yemek adı -->
+            <TextView
+                android:id="@+id/tv_food_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:paddingTop="8dp"
+                android:text="Pizza Margherita"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Açıklama -->
+
+            <!-- Fiyat ve Sepete Ekle -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_food_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="₺49.99"
+                    android:textColor="#FF5722"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent"
+                    card_view:layout_constraintVertical_bias="0.5" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add_to_cart"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#FF5722"
+                    card_view:cornerRadius="@dimen/cardview_default_radius"
+                    card_view:icon="@drawable/outline_add"
+                    card_view:iconGravity="textTop"
+                    card_view:iconPadding="0dp"
+                    card_view:iconSize="24dp"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent"
+                    card_view:layout_constraintVertical_bias="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <!-- Kalp (favori) butonu -->
+        <ImageButton
+            android:id="@+id/btn_favorite"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="6dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Favorilere ekle"
+            android:src="@drawable/outline_add" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
