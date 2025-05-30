@@ -44,6 +44,7 @@ class FoodsAdapter(var mContext: Context,
         t.btnAddToCart.setOnClickListener {
             val newQuantity = (orderQuantities[food.yemek_adi] ?: 0) + 1
             orderQuantities[food.yemek_adi] = newQuantity
+            viewModel.add(food.yemek_adi, food.yemek_resim_adi, food.yemek_fiyat, newQuantity, "HakanEmik")
 
         }
     }
