@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
@@ -20,18 +21,40 @@ class FoodDetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding= FragmentFoodDetailsBinding.inflate(inflater,container,false)
-        val bundle : FoodDetailsFragmentArgs by navArgs()
-        val incomingFood=bundle.food
-        val incomingFoodOrderQuantity=bundle.foodOrderQuantity
-        binding.tvFoodName.setText(incomingFood.yemek_adi)
-        binding.tvPrice.setText("₺ ${incomingFood.yemek_fiyat.toString()}")
-        binding.btnAddToCart.text="Sepete Ekle - ₺ ${incomingFood.yemek_fiyat.toString()}"
-        binding.tvQuantity.text=incomingFoodOrderQuantity.toString()
-        val url="http://kasimadalan.pe.hu/yemekler/resimler/${incomingFood.yemek_resim_adi}"
-        Glide.with(this).load(url).override(600,600).into(binding.ivFoodImage)
+    ): View {
+        binding = FragmentFoodDetailsBinding.inflate(inflater, container, false)
+        val bundle: FoodDetailsFragmentArgs by navArgs()
+        binding.toolbar.setNavigationIcon(R.drawable.close)
+        binding.toolbar.setNavigationOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
+        val incomingFood = bundle.food
+        val foodName = incomingFood.yemek_adi
 
+        val currentQuantity = viewModel.getQuantity(foodName)
+
+        binding.tvQuantity.text = currentQuantity.toString()
+        binding.tvFoodName.text = foodName
+        binding.tvPrice.text = "₺ ${incomingFood.yemek_fiyat}"
+        binding.btnAddToCart.text = "Sepete Ekle - ₺ ${incomingFood.yemek_fiyat * (currentQuantity.coerceAtLeast(1))}"
+        binding.btnAddToCart.setOnClickListener {
+            viewModel.addToCart(
+                foodName,
+                incomingFood.yemek_resim_adi,
+                incomingFood.yemek_fiyat,
+                "HakanEmik")
+        }
+
+        val url = "http://kasimadalan.pe.hu/yemekler/resimler/${incomingFood.yemek_resim_adi}"
+        Glide.with(this).load(url).override(600, 600).into(binding.ivFoodImage)
+
+        binding.btnIncrease.setOnClickListener {
+            viewModel.increaseQuantity(foodName)
+            val updatedQuantity = viewModel.getQuantity(foodName)
+            binding.tvQuantity.text = updatedQuantity.toString()
+            binding.btnAddToCart.text = "Sepete Ekle - ₺ ${incomingFood.yemek_fiyat * updatedQuantity}"
+
+        }
 
         return binding.root
     }
