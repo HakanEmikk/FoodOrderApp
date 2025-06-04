@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    card_view:cardCornerRadius="12dp"
+    card_view:cardCornerRadius="8dp"
     card_view:cardElevation="6dp">
 
     <RelativeLayout
@@ -38,13 +38,22 @@
                 android:paddingTop="8dp"
                 android:text="Pizza Margherita"
                 android:textAlignment="center"
-                android:textColor="@color/product_name_text"
+                android:textColor="@color/color_on_surface"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <!-- Açıklama -->
 
             <!-- Fiyat ve Sepete Ekle -->
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ücretsiz Teslimat"
+                android:textAlignment="center"
+                tools:text="Ücretsiz Teslimat" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="₺49.99"
-                    android:textColor="@color/product_price_text"
+                    android:textColor="@color/color_on_surface"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     card_view:layout_constraintBottom_toBottomOf="parent"
@@ -66,18 +75,22 @@
                     card_view:layout_constraintVertical_bias="0.5" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:background="@color/add_button_background"
-                    android:textColor="@color/add_button_text"
                     android:id="@+id/btn_add_to_cart"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginEnd="8dp"
-                    android:backgroundTint="#FF5722"
-                    card_view:cornerRadius="@dimen/cardview_default_radius"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="2dp"
+
+                    android:backgroundTint="@color/color_primary"
+                    android:textColor="@color/color_on_primary"
+                    android:textColorLink="@color/color_primary"
+                    card_view:cornerRadius="8dp"
                     card_view:icon="@drawable/outline_add"
                     card_view:iconGravity="textTop"
                     card_view:iconPadding="0dp"
                     card_view:iconSize="24dp"
+                    card_view:iconTint="@color/color_on_primary"
                     card_view:layout_constraintBottom_toBottomOf="parent"
                     card_view:layout_constraintEnd_toEndOf="parent"
                     card_view:layout_constraintTop_toTopOf="parent"

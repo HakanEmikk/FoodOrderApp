@@ -4,4 +4,9 @@
     <style name="BottomNavTextAppearance" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textSize">10sp</item>
     </style>
+    <style name="ToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">22sp</item> <!-- İstediğin boyutu burada belirle -->
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_on_primary</item> <!-- Ya da color_on_primary -->
+    </style>
 </resources>

@@ -11,10 +11,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/white"
+        app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:titleMargin="0dp">
 
         <TextView
@@ -22,11 +22,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Sepetim"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="20dp" />
     </androidx.appcompat.widget.Toolbar>
 
@@ -34,6 +33,7 @@
         android:id="@+id/basketRv"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/color_background"
         app:layout_constraintBottom_toTopOf="@+id/bottomSection"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,13 +76,13 @@
             android:id="@+id/tvToplamLabel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="Toplam:"
+            android:textColor="@color/color_on_surface"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/tvToplam"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvGonderimLabel" />
 
         <TextView
@@ -91,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="₺0"
-            android:textColor="@color/black"
+            android:textColor="@color/color_on_surface"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -101,13 +101,14 @@
             android:id="@+id/btnSepetOnayla"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:text="SEPET ONAYLA"
-            android:background="@drawable/button_yellow"
-            android:textColor="@color/black"
-            android:textStyle="bold"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/color_primary"
+            android:text="SEPET ONAYLA"
+            android:textColor="@color/color_on_primary"
+            android:textStyle="bold"
+            app:cornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvToplamLabel" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,20 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.HomepageFragment" >
+    tools:context=".ui.fragment.HomepageFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarHomepage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/toolbar_background"
+        android:background="@color/color_primary"
         android:minHeight="?attr/actionBarSize"
+        android:paddingStart="0dp"
         android:theme="?attr/actionBarTheme"
+        app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Yemekler"
-        app:titleTextColor="@color/toolbar_title_text" />
+        app:titleMargin="0dp">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Yemekler"
+            android:textAlignment="center"
+            android:textColor="@color/color_on_primary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/toolbarHomepage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
+    </androidx.appcompat.widget.Toolbar>
+
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="0dp"
@@ -37,11 +55,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
+        android:background="@color/color_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchView" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

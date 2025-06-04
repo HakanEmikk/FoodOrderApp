@@ -1,97 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Toolbar Colors -->
-    <color name="toolbar_background">#6B46C1</color>
-    <color name="toolbar_title_text">#FFFFFF</color>
-    <color name="toolbar_back_icon">#FFFFFF</color>
 
-    <!-- SearchView Colors -->
-    <color name="searchview_background">#FFFFFF</color>
-    <color name="searchview_hint_text">#64748B</color>
-    <color name="searchview_text">#1E293B</color>
-    <color name="searchview_icon">#64748B</color>
-
-    <!-- Card/Item Colors -->
-    <color name="card_background">#FFFFFF</color>
-    <color name="card_stroke">#E2E8F0</color>
-    <color name="product_name_text">#1E293B</color>
-    <color name="product_price_text">#F97316</color>
-    <color name="product_rating_text">#64748B</color>
-
-    <!-- Button Colors -->
-    <color name="add_button_background">#F97316</color>
-    <color name="add_button_text">#FFFFFF</color>
-    <color name="quantity_button_background">#8B5CF6</color>
-    <color name="quantity_button_text">#FFFFFF</color>
-    <color name="quantity_text">#1E293B</color>
-
-    <!-- Favorite Colors -->
-    <color name="favorite_button_background">#EC4899</color>
-    <color name="favorite_button_text">#FFFFFF</color>
-    <color name="heart_icon_favorite">#EC4899</color>
-    <color name="heart_icon_normal">#E2E8F0</color>
-
-    <!-- Cart Colors -->
-    <color name="cart_button_background">#10B981</color>
-    <color name="cart_button_text">#FFFFFF</color>
-    <color name="delete_icon">#EF4444</color>
-
-    <!-- Bottom Section Colors -->
-    <color name="shipping_label_text">#64748B</color>
-    <color name="shipping_price_text">#64748B</color>
-    <color name="total_label_text">#1E293B</color>
-    <color name="total_price_text">#1E293B</color>
-    <color name="checkout_button_background">#6B46C1</color>
-    <color name="checkout_button_text">#FFFFFF</color>
-
-    <!-- Bottom Navigation Colors -->
-    <color name="bottom_nav_background">#FFFFFF</color>
-    <color name="bottom_nav_selected">#6B46C1</color>
-    <color name="bottom_nav_unselected">#64748B</color>
-
-    <!-- Background Colors -->
-    <color name="activity_background">#F8FAFC</color>
-    <color name="fragment_background">#F8FAFC</color>
-
-    <!-- Text Colors -->
-    <color name="text_primary">#1E293B</color>
-    <color name="text_secondary">#64748B</color>
-    <color name="text_white">#FFFFFF</color>
-    <color name="text_black">#000000</color>
-
-    <!-- Other Colors -->
-    <color name="transparent">#00000000</color>
 
     <!-- Ana tema renkleri -->
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryVariant">#3700B3</color>
-    <color name="colorOnPrimary">#FFFFFF</color>
 
-    <color name="colorSecondary">#03DAC6</color>
-    <color name="colorSecondaryVariant">#018786</color>
-    <color name="colorOnSecondary">#000000</color>
 
-    <!-- Açık ve koyu temaya özel arka plan renkleri -->
-    <color name="colorBackgroundLight">#FFFFFF</color>
-    <color name="colorBackgroundDark">#121212</color>
+    <!-- Ana Renk: Başlık barı, + butonu gibi ana öğelerde -->
+    <color name="color_primary">#5E8C61</color> <!-- Zeytin Yeşili -->
 
-    <!-- Metin renkleri -->
-    <color name="textColorPrimary">#212121</color>
-    <color name="textColorSecondary">#757575</color>
+    <!-- Ana Rengin koyu tonu: buton basılı hali gibi -->
+    <color name="color_primary_variant">#446C49</color> <!-- Daha koyu yeşil -->
 
-    <!-- Buton, ikon, çizgi gibi öğeler için renkler -->
-    <color name="gray">#808080</color>
-    <color name="teal_700">#018786</color>
-    <color name="teal_200">#80CBC4</color>
+    <!-- İkincil renk: "Favorilere Ekle" butonu gibi dikkat çekici öğelerde -->
+    <color name="color_secondary">#F4B400</color> <!-- Altın Sarısı -->
+
+    <!-- Sayfa arkaplan rengi: tüm ekranlar için arka plan -->
+    <color name="color_background">#FAFAFA</color> <!-- Kırık Beyaz -->
+
+    <!-- Kart arkaplanı: ürün kartları, sepet kartları, arama kutusu -->
+    <color name="color_surface">#FFFFFF</color> <!-- Saf Beyaz -->
+
+    <!-- Hata rengi: sil butonu (çöp kutusu) gibi -->
+    <color name="color_error">#D32F2F</color> <!-- Canlı Kırmızı -->
+
+    <!-- Primary renk üstündeki yazı rengi (örneğin: yeşil buton üstü beyaz yazı) -->
+    <color name="color_on_primary">#FFFFFF</color> <!-- Beyaz yazı -->
+
+    <!-- Secondary renk üstündeki yazı rengi (örneğin: sarı buton üstü siyah yazı) -->
+    <color name="color_on_secondary">#000000</color> <!-- Siyah yazı -->
+
+    <!-- Arka plan üstündeki yazılar (örnek: sayfa başlığı, kategori adları) -->
+    <color name="color_on_background">#212121</color> <!-- Koyu Gri yazı -->
+
+    <!-- Kart (surface) içindeki yazılar: ürün adı, fiyat, açıklama -->
+    <color name="color_on_surface">#212121</color> <!-- Koyu Gri yazı -->
+
+    <!-- Yıldız rengi (puanlama) -->
+    <color name="color_rating_star">#FFD700</color> <!-- Altın sarısı (değişmedi) -->
+
+    <!-- Açıklama yazıları için gri ton -->
+    <color name="color_hint">#757575</color> <!-- Açık gri -->
+
+    <color name="bottom_nav_background">#FFFFFF</color>
+    <color name="bottom_nav_selected">#6B46C1</color>
+    <color name="bottom_nav_unselected">#64748B</color>
 
     <!-- Seçim renkleri -->
-    <color name="nav_item_selected">#018786</color>
+    <color name="nav_item_selected">#446C49</color>
     <color name="nav_item_unselected">#808080</color>
-
-    <!-- Durumlara göre arka plan renkleri -->
-    <color name="errorRed">#B00020</color>
-    <color name="successGreen">#4CAF50</color>
-
 </resources>
